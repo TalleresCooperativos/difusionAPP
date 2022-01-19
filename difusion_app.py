@@ -24,4 +24,5 @@ file_list_column = [
             sg.Text("Image Folder"),
             sg.In(size=(25,1), enable_events=True, key="-FOLDER-"),
             sg.FolderBrowse(),
-    ]] 
+    ]
+] 

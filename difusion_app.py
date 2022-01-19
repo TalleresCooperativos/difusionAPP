@@ -1,4 +1,5 @@
-#difusion_app.py
+# difusion_app.py
+# preferible usar python 3.7.3
 
 import PySimpleGUI as sg
 
@@ -7,16 +8,16 @@ sg.Window(title = "hello world", layout =[[]
 
 
 
-# presentacion donde se redacta el mensaje
+# panel de presentacion donde se redacta el mensaje
 
-mensaje_viewer_column = [
-    [sg.Text("Choose an imagen on the list of the left:")],
-    [sg.Text(size=(40,1), key="-TOUT-")],
-    [sg.Image(key="-IMAGE-")],
+mensaje_viewer_column =  [  
+            [sg.Text("What's your name?")],     
+            [sg.Input()],
+            [sg.Button('Ok')]
 ]
 
 
-#caja de ingreso de texto 
+# caja de ingreso de texto y listado de los numeros
 
 
 file_list_column = [
@@ -26,3 +27,5 @@ file_list_column = [
             sg.FolderBrowse(),
     ]
 ] 
+
+

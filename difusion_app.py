@@ -3,29 +3,47 @@
 
 import PySimpleGUI as sg
 
-sg.Window(title = "hello world", layout =[[]
-], margins = (500, 500)).read()
-
 
 
 # panel de presentacion donde se redacta el mensaje
 
 mensaje_viewer_column =  [  
-            [sg.Text("What's your name?")],     
+            [sg.Text("ingese su mensaje")],
             [sg.Input()],
-            [sg.Button('Ok')]
+            [sg.Button('ENVIAR')]
 ]
 
 
 # caja de ingreso de texto y listado de los numeros
 
 
-file_list_column = [
-    [
-            sg.Text("Image Folder"),
-            sg.In(size=(25,1), enable_events=True, key="-FOLDER-"),
-            sg.FolderBrowse(),
+celu_list_column = [
+            sg.Text("numero de celular"),
+            [sg.Input()],
+            [sg.Button('Ok')]
     ]
-] 
+
+
+layout = [
+    [
+        sg.Column(celu_list_column),
+        sg.VSeparator(),
+        sg.Column(mensaje_viewer_column),
+    ]
+]
+
+
+
+
+window = sg.Window("Image Viewer",layout)
+
+# event loop
+
+while True:
+    event, values = window.read()
+    if event == "Exit" or event == sg.WIN_CLOSED:
+        break
+
+window.close()
 
 

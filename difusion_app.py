@@ -47,4 +47,4 @@ while True:
 window.close()
 
 
-# ultima modificacio
+# ultima modificacion

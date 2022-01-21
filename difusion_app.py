@@ -18,11 +18,11 @@ mensaje_viewer_column =  [
 
 
 celu_list_column = [
-            sg.Text("numero de celular"),
+            [sg.Text("numero de celular")],
             [sg.Input()],
-            [sg.Button('Ok')]
-    ]
-
+            [sg.Button('Ok')],
+            [sg.Listbox(values = [], enable_events = True, size = (40, 20), key = "-FILE LIST-")]
+]
 
 layout = [
     [

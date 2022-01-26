@@ -3,7 +3,14 @@
 
 import PySimpleGUI as sg
 
+datos2 = []
+	
+with open("additionalFacilities2.txt") as f:
+	for lineas in f:
+		datos2.extend(lineas.split())				
+		#print ("i" , datos2)
 
+valores_viaje=datos2
 
 # panel de presentacion donde se redacta el mensaje
 
@@ -23,6 +30,8 @@ celu_list_column = [
             [sg.Button('Ok')],
             [sg.Listbox(values = [], enable_events = True, size = (40, 20), key = "-FILE LIST-")]
 ]
+
+
 
 layout = [
     [
